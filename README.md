@@ -32,10 +32,9 @@ pip install SpeechRecognition
 pip install pyaudio
 import speech_recognition as sr
 r = sr.Recognizer()
-duration = 7
 print("Start speaking:")
 with sr.Microphone() as source :
-    audio_data = r.listen(source,timeout = duration)
+    audio_data = r.listen(source)
 try:
     text = r.recognize_google(audio_data)
     print("You said:", text)
@@ -50,7 +49,7 @@ except Exception as e:
 
 <H3> Output:</H3>
 
-![exp 8 outout final](https://github.com/user-attachments/assets/24642085-851a-4fb0-8836-03c9e9c33e82)
+![image](https://github.com/user-attachments/assets/62419ef1-6e7d-4aa3-806f-38b041bfe750)
 
 <H3> Result:</H3>
 Thus, we have implemented a program that will transcribe the audio file in the file variable and print the transcribed text on the console, one line at a time.
